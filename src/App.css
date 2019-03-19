@@ -1,0 +1,145 @@
+/* Global Variables For Colors */
+:root {
+  --main-color: #3e6787;
+  --secondary-color: #2d4057;
+  --third-color: #f4f4bd;
+  --text-color: #fbf9f7;
+}
+/* Layout for the App */
+.app {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(6 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 60px;
+  grid-template-areas:
+    "g m m m m m" "g m m m m m" "g m m m m m" "g m m m m m"
+    "g m m m m m" "a f f f f f";
+}
+.groupArea {
+  grid-area: g;
+}
+.messageArea {
+  grid-area: m;
+}
+.addGroupArea {
+  grid-area: a;
+}
+.formArea {
+  grid-area: f;
+}
+
+/* CSS for App && Components */
+
+/* CSS for Group Components */
+
+.groupArea {
+  box-sizing: border-box;
+  padding: 8px;
+  background: var(--main-color);
+  color: var(--third-color);
+  text-align: center;
+  overflow: show;
+}
+.groupArea ul {
+  list-style-type: none;
+  padding: 0;
+}
+.groupArea li {
+  font-weight: 400;
+  margin: 10px 0;
+}
+.groupArea .groupName button {
+  font-size: 20px;
+  color: var(--text-color);
+  background: none;
+  border-style: none;
+}
+.groupArea .groupName button:focus {
+  outline-width: 0;
+}
+
+/* CSS for Message Components */
+
+.messageArea {
+  box-sizing: border-box;
+  background: var(--secondary-color);
+  overflow: show;
+  padding: 10px;
+}
+/* CSS for MessageList Components */
+
+.messageEntry {
+  text-align: center;
+  color: var(--main-color);
+  font-size: 25px;
+  margin-top: 10vh;
+}
+
+.messageContainer {
+  margin-left: 8px;
+}
+.senderId {
+  color: var(--text-color);
+  font-size: 11px;
+  opacity: 0.9;
+  margin-bottom: 15px;
+}
+.incomingText {
+  background: var(--third-color);
+  color: var(--secondary-color);
+  display: inline;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+/* CSS for AddGroup Components */
+
+.addGroupArea {
+  display: flex;
+}
+.addGroupArea input {
+  border-style: none;
+  height: 100%;
+  text-align: center;
+  color: var(--secondary-color);
+}
+.addGroupArea input::placeholder {
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.addGroupArea input:focus {
+  outline-width: 0;
+}
+.addGroupArea button {
+  height: 100%;
+  border-style: none;
+  background: none;
+  color: var(--secondary-color);
+  font-size: 25px;
+  cursor: pointer;
+}
+.addGroupArea button:focus {
+  outline-width: 0;
+}
+
+/* CSS for FormText Components */
+.formArea {
+  display: flex;
+}
+.formArea input {
+  width: 100%;
+  border: none;
+  margin: 0;
+  padding: 2%;
+  color: var(--secondary-color);
+}
+.formArea input:focus {
+  outline-width: 0;
+}
+.formArea input::placeholder {
+  color: var(--secondary-color);
+  font-size: 15px;
+  margin-left: 2vw;
+}
